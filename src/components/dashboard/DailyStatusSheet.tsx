@@ -1,4 +1,4 @@
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/;
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Mic, Receipt, ImageIcon, ChevronLeft } from 'lucide-react';
 import type { Project } from '@/data/mockData';
