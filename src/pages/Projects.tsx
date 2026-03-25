@@ -27,6 +27,7 @@ function formatDateHe(iso: string): string {
 
 export default function ProjectsPage() {
   const dir = 'rtl';
+  const navigate = useNavigate();
   const [projects, setProjects] = useState<ProjectItem[]>(MOCK_PROJECT_LIST);
   const [showTrash, setShowTrash] = useState(false);
   const [addModalOpen, setAddModalOpen] = useState(false);
@@ -41,7 +42,7 @@ export default function ProjectsPage() {
     setProjects(prev => prev.map(p => p.id === id ? { ...p, status: newStatus } : p));
   };
   const onOpenQuote = (id: string) => console.log('Open quote:', id);
-  const onViewPhases = (id: string) => console.log('View phases:', id);
+  const onViewPhases = (id: string) => navigate(`/projects/${id}`);
   const onMoveToTrash = (id: string) => {
     console.log('Move to trash:', id);
     setProjects(prev => prev.map(p => p.id === id ? { ...p, status: 'trash' as ProjectStatus } : p));
