@@ -68,7 +68,7 @@ export default function ProjectDetail() {
 
   const onOpenWorkPlan = useCallback(() => console.log('onOpenWorkPlan', projectId), [projectId]);
   const onTranslateProjectName = useCallback(() => console.log('onTranslateProjectName'), []);
-  const onTranslateTaskTitle = useCallback((taskId: string) => console.log('onTranslateTaskTitle', taskId), [taskId]);
+  const onTranslateTaskTitle = useCallback((id: string) => console.log('onTranslateTaskTitle', id), []);
 
   // Group tasks by phase
   const phaseGroups = useMemo(() => {
